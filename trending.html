@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trending today</title>
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar flexbox sticky">
+      <div class="left">
+        <a href="index.html"
+          ><img class="logo" src="img/logo.png" alt="MoviesX-logo"
+        /></a>
+      </div>
+      <div class="searchbar flexbox search-icon">
+        <input
+          type="text"
+          class="search-input-box"
+          placeholder="Search for Movies and TV Shows"
+        />
+        <button class="search-btn">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+      <div class="nav-list">
+        <ul class="ul-flexbox flexbox">
+          <li class="nav-list-item">
+            <a href="#" class="watchlist flexbox">
+              <i class="fa-solid fa-square-plus icon"></i>
+              <p class="watchlist-txt">Watchlist</p>
+              <!-- No of items in watchlist -->
+              <div class="watchlist-items-count">5</div>
+            </a>
+          </li>
+          <li class="nav-list-item">
+            <a href="#" class="profile flexbox">
+              <i class="fa-solid fa-user icon"></i>
+              <p class="profile-txt">Username</p>
+              <i class="fa-solid fa-caret-down icon"></i>
+            </a>
+            <ul class="dropdown-li flexbox">
+              <li class="dropdown-li-item"><a href="#">Settings</a></li>
+              <li class="dropdown-li-item"><a href="#">FAQ</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main class="main">
+      <div class="trending-page-container" style="padding-top: 12rem">
+        <div class="heading flexbox">
+          <div class="section-heading">
+            <p>Trending</p>
+            <p class="section-description">Top Movies and TV shows today</p>
+          </div>
+        </div>
+        <ol class="trending-li"></ol>
+      </div>
+    </main>
+    <script
+      src="https://kit.fontawesome.com/b5a6da69c0.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/trendingScript.js"></script>
+  </body>
+</html>

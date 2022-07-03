@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MoviesX | One Stop Destination for Movies and TV Shows</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+  </head>
+
+  <body>
+    <!-- ************************ -->
+    <!-- ******NAVBAR SECTION**** -->
+    <!-- ************************ -->
+
+    <nav class="navbar flexbox">
+      <div class="left">
+        <a href="index.html"
+          ><img class="logo" src="img/logo.png" alt="MoviesX-logo"
+        /></a>
+      </div>
+      <div class="searchbar flexbox search-icon">
+        <input
+          type="text"
+          class="search-input-box"
+          id="search-input-box"
+          placeholder="Search for Movies and TV Shows"
+          onkeyup="handleSearch()"
+        />
+        <button class="search-btn">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+      <div class="nav-list">
+        <ul class="ul-flexbox flexbox">
+          <li class="nav-list-item">
+            <a href="#" class="watchlist flexbox">
+              <i class="fa-solid fa-square-plus icon"></i>
+              <p class="watchlist-txt">Watchlist</p>
+              <!-- No of items in watchlist -->
+              <div class="watchlist-items-count">5</div>
+            </a>
+          </li>
+          <li class="nav-list-item">
+            <a href="#" class="profile flexbox">
+              <i class="fa-solid fa-user icon"></i>
+              <p class="profile-txt">Username</p>
+              <i class="fa-solid fa-caret-down icon"></i>
+            </a>
+            <ul class="dropdown-li flexbox">
+              <li class="dropdown-li-item"><a href="#">Settings</a></li>
+              <li class="dropdown-li-item"><a href="#">FAQ</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ************************ -->
+    <!-- ******HERO SECTION****** -->
+    <!-- ************************ -->
+    <div class="loading-container flexbox">
+      <div class="" id="loading"></div>
+      <div id="showOutput"></div>
+    </div>
+    <section class="section-hero">
+      <div class="hero-movie-details"></div>
+      <!-- Slideshow container -->
+      <div class="slideshow-container"></div>
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </section>
+
+    <main class="main">
+      <!-- ************************ -->
+      <!-- ******TRENDING SECTION** -->
+      <!-- ************************ -->
+      <section class="section-trending">
+        <a href="trending.html">
+          <div class="heading flexbox">
+            <div class="section-heading">
+              <p>Trending</p>
+              <p class="section-description">Top Movies and TV shows today</p>
+            </div>
+          </div>
+        </a>
+        <div class="grid-container-trending grid grid-6-cols"></div>
+      </section>
+
+      <!-- ************************ -->
+      <!-- ****UPCOMING SECTION**** -->
+      <!-- ************************ -->
+
+      <section class="section-upcoming">
+        <a href="upcoming.html">
+          <div class="heading flexbox">
+            <div class="section-heading">
+              <p>Upcoming Movies</p>
+              <p class="section-description">Movies coming to theatres soon</p>
+            </div>
+          </div>
+        </a>
+        <!-- Slideshow container -->
+        <div class="upcoming-slideshow-container fade">
+          <div class="flex-container-upcoming flexbox"></div>
+          <a class="prev-upcoming" onclick="minusGridSlides()">&#10094;</a>
+          <a class="next-upcoming" onclick="plusGridSlides()">&#10095;</a>
+        </div>
+        <!-- Next and previous buttons -->
+      </section>
+
+      <!-- ************************ -->
+      <!-- ****WATCHLIST SECTION**** -->
+      <!-- ************************ -->
+      <section class="section-watchlist">
+        <a href="watchlist.html">
+          <div class="heading flexbox">
+            <div class="section-heading">
+              <p>From your Watchlist</p>
+              <p class="section-description">
+                Movies and TV shows from your watchlist
+              </p>
+            </div>
+          </div>
+        </a>
+        <div class="watchlist-slideshow-container fade">
+          <div class="flex-container-watchlist flexbox">
+            <div class="card card-1">
+              <!-- <img class="card-img" src="" /> -->
+              <!-- <div class="card-rating"></div> -->
+              <div class="card-description"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ************************ -->
+    <!-- *******CTA SECTION****** -->
+    <!-- ************************ -->
+    <section class="section-cta">
+      <div class="cta-container flexbox">
+        <div class="cta-heading">Start Exploring Now</div>
+        <div class="cta-description">
+          Sign up for an account to get personalised recommendations for movies
+          and TV shows to watch.
+        </div>
+        <button class="watchlist-btn" style="border-radius: 1rem">
+          Sign Up
+        </button>
+      </div>
+    </section>
+
+    <footer class="footer flexbox">
+      <a href="index.html"
+        ><img class="footer-logo" src="img/logo.png" alt="MoviesX-logo"
+      /></a>
+      <div class="links flexbox">
+        <a class="footer-li" href="">Privacy Policy</a>
+        <a class="footer-li" href="">Conditions of Use</a>
+        <a class="footer-li" href="">FAQ</a>
+        <a class="footer-li" href="">Site Map</a>
+      </div>
+      <div class="socials">
+        <a href="#" class="social-link"
+          ><i class="fa-brands fa-facebook social-icon"></i>
+        </a>
+        <a href="#" class="social-link"
+          ><i class="fa-brands fa-twitter social-icon"></i
+        ></a>
+        <a href="#" class="social-link"
+          ><i class="fa-brands fa-instagram social-icon"></i
+        ></a>
+      </div>
+    </footer>
+
+    <!-- ************************ -->
+    <!-- **********SCRIPT******** -->
+    <!-- ************************ -->
+    <script
+      src="https://kit.fontawesome.com/b5a6da69c0.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

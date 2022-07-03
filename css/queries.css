@@ -1,0 +1,59 @@
+@media all and (max-width: 1024px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media all and (max-width: 768px) {
+  .section-hero {
+    margin-bottom: 9.6rem;
+  }
+  .flex-container-upcoming {
+    width: 80%;
+  }
+  .searchbar {
+    flex: 2;
+  }
+  .grid-6-cols {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media all and (max-width: 685px) {
+  .cta-container {
+    width: 90%;
+  }
+  .searchbar {
+    display: none;
+  }
+  .profile {
+    display: none;
+  }
+  .hero-title {
+    font-size: 2.4rem;
+  }
+  .hero-description {
+    font-size: 1.6rem;
+  }
+  .hero-movie-details {
+    margin-left: 5rem;
+    padding-top: 60vh;
+    margin-bottom: 3.6rem;
+  }
+  .section-hero {
+    margin-bottom: 0;
+  }
+  .grid-container-trending {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .upcoming {
+    width: 20rem;
+  }
+  .prev-upcoming,
+  .next-upcoming {
+    padding: 10px;
+  }
+  .prev,
+  .next {
+    padding: 10px;
+  }
+}
